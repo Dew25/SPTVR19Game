@@ -5,6 +5,8 @@
  */
 package sptvr19game;
 
+import java.util.Scanner;
+
 /**
  *
  * @author sillamae kutsekool
@@ -12,5 +14,15 @@ package sptvr19game;
 class App {
     public void run(){
         System.out.println("Угадай задуманное число.");
+        System.out.println("---------------------------");
+        int myNumber = 2;
+        System.out.println("Задумано число от 0 до 5. Угадай!");
+        Scanner scanner = new Scanner(System.in);
+        int gamerNumber = scanner.nextInt();
+        if(myNumber == gamerNumber){
+            System.out.println("Ты выиграл!");
+        }else{
+            System.out.println("Ты проиграл. Задумано число: "+myNumber);
+        }
     }
 }
